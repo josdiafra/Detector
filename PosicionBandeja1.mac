@@ -1,0 +1,37 @@
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#/run/numberOfWorkers 4
+#
+# Initialize kernel
+/run/initialize
+
+
+/process/em/auger true
+/process/em/fluo true
+
+/grdm/setPhotoEvaporationFile 93 237 /Users/JoseAngel/Desktop/detectorV1/DetectorV1/data/z93.a237
+/grdm/applyICM true
+/grdm/applyARM false
+
+
+/gps/energy 0 MeV
+/gps/particle geantino
+/gps/direction 0 1 0
+
+/gps/ion 95 241 0 0 
+/grdm/nucleusLimits 241 241 95 95
+
+/gps/position 0 12.220020 0 mm
+/gps/type Volume
+/gps/shape Cylinder
+/gps/pos/confine muestraAm241
+/gps/radius 1.1 cm
+/gps/halfz 0.000040 mm
+/gps/pos/rot1 1 0 0
+/gps/pos/rot2 0 0 1
+
+
+/run/beamOn 1000

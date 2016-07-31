@@ -1,0 +1,47 @@
+# Macro file for example B4
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#/run/numberOfWorkers 4
+#
+# Initialize kernel
+/run/initialize
+#
+
+#
+#/grdm/setRadioactiveDecayFile 84 210 /Users/JoseAngel/Desktop/detectorV1/DetectorV1/z84.a210
+
+/detector/posicionMuestra/setPosicionBandeja 1
+/run/initialize   
+
+/tracking/verbose 0
+
+/gps/energy 0 keV
+/gps/particle ion
+/gps/direction 0 1 0
+
+ 
+#/gps/ion 84 210 0 0 
+#/grdm/nucleusLimits 210 210 84 84 
+
+/gps/ion 95 241 0 0 
+/grdm/nucleusLimits 241 241 95 95 
+
+
+/gps/position 0 -26.51 0 mm
+/gps/type Surface
+/gps/shape Cylinder
+/gps/radius 1.2 cm
+
+
+
+/gps/pos/rot1 1 0 0
+/gps/pos/rot2 0 0 1
+
+
+ 
+ 
+/run/beamOn 100
+ 

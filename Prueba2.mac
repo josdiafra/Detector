@@ -1,0 +1,50 @@
+# Macro file for example B4
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#/run/numberOfWorkers 4
+#
+# Initialize kernel
+/run/initialize
+#
+
+#
+/gps/particle ion
+/gps/energy 0 keV
+
+# first isotope Cf240 with strength of 2.
+/gps/source/intensity 2.
+/gps/ion 98 240
+/gps/position 0 15 0 mm
+/gps/type Surface
+/gps/shape Cylinder
+/gps/radius 1.2 cm
+
+
+# second isotope Cs137 with strength of 1.
+/gps/source/add 1.
+/gps/ion 55 137
+
+/gps/position 0 20 0 mm
+/gps/type Surface
+/gps/shape Cylinder
+/gps/radius 1.2 cm
+
+# third isotope U238 with strength of 1.5
+/gps/source/add 1.5
+/gps/ion 92 238
+/gps/source/list
+/tracking/verbose 0
+
+/gps/position 0 24 0 mm
+/gps/type Surface
+/gps/shape Cylinder
+/gps/radius 1.2 cm
+
+/gps/pos/rot1 1 0 0
+/gps/pos/rot2 0 0 1
+
+
+/run/beamOn 1000
