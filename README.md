@@ -1,4 +1,4 @@
-# josdiafra.github.io
+# Geant4PIPSTFM.github.io
 
 Geant4 is a public toolkit for High Energy Physics (HEP) experiments using Object-Oriented environment and written in C++. GEANT4 is a Monte Carlo code not only for HEP but cosmic rays physics, space science and medical applications.
 
